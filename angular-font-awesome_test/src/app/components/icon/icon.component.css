@@ -1,0 +1,15 @@
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  padding: 40px;
+  border: 1px solid var(--rose-taupe);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
+  transition: all .3s;
+}
+
+.icon-container:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
