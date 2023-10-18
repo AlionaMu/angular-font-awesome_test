@@ -6,6 +6,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { IconComponent } from './components/icon/icon.component';
 import { GetRandomService } from './shared/services/getRandom.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
