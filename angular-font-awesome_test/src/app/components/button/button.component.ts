@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GetRandomService } from 'src/app/shared/services/getRandom.service';
+import { GlobalService } from 'src/app/shared/services/global.service';
 
 @Component({
   selector: 'app-button',
@@ -6,10 +8,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
+  constructor (
+    public getRandomService: GetRandomService,
+    public globalService: GlobalService
+  ) { }
 
-  constructor() { }
+  clickHandler(): void {
+    if (!this.globalService.isIconPanelOpen) {
+      this.openIconPanel();
+    }
+    setTimeout(() => {
+      this.setName()
+    }, 3000);
+  }
 
-  // goHome() {
-  //   this.router.navigate(['']);
-  // }
+  setName(): void {
+    this.globalService.setFaName(this.getName());
+  }
+
+  openIconPanel(): void {
+    this.globalService.openPanel();
+  }
+
+  getName(): string {
+    return this.getRandomService.getRandomName()
+  }
 }

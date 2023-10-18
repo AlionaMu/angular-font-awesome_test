@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './components/button/button.component';
 import { IconComponent } from './components/icon/icon.component';
+import { GetRandomService } from './shared/services/getRandom.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { IconComponent } from './components/icon/icon.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [GetRandomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
