@@ -1,0 +1,16 @@
+* {
+  --mint-cream: #eff9f0ff;
+  --pale-dogwood: #ddc8c4ff;
+  --rose-taupe: #896a67ff;
+  --eggplant: #6b4d57ff;
+  --licorice: #13070cff;
+}
+
+.main {
+  height: 100vh;
+  background-color: var(--pale-dogwood);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
